@@ -1,8 +1,5 @@
 import tensorflow as tf
 
-from cifar10_model_pre import _variable_with_weight_decay
-from cifar10_model_pre import _variable_on_cpu
-from cifar10_model_pre import _activation_summary
 import cifar10_input
 from inception.slim import ops, scopes
 
