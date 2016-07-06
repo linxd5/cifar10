@@ -38,8 +38,9 @@ def inference(images):
             net = ops.max_pool(net)
             net = ops.conv2d(net, num_filters_out=512)
             net = ops.conv2d(net, num_filters_out=512)
+            net = ops.avg_pool(net, kernel_size=[3,3], padding='SAME')
             net = ops.flatten(net)
-            net = ops.fc(net, num_units_out=1024)
-            net = ops.fc(net, num_units_out=256)
+            # net = ops.fc(net, num_units_out=1024)
+            # net = ops.fc(net, num_units_out=256)
             net = ops.fc(net, num_units_out=10)
             return net
